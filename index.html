@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09051d">
+<title>Neon Champion | For Praveen Uncle 🥇</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="bubble-layer" aria-hidden="true"></div>
+<div id="confetti-layer" aria-hidden="true"></div>
+
+<nav>
+  <div class="logo">⚡ NEON CHAMPION</div>
+  <a class="nav-link" href="#fun">LET'S HAVE FUN ↓</a>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="pill">A SPECIAL WEBSITE FOR PRAVEEN UNCLE</div>
+      <div class="medal">🥇</div>
+
+      <h1>
+        THANK YOU,<br>
+        <span class="neon-pink">PRAVEEN</span><br>
+        <span class="neon-cyan">UNCLE!</span>
+      </h1>
+
+      <p>
+        I won a gold medal at the National Swimming Championship!
+        🎉 I made this neon-powered little website to share my
+        happiness with you. Ready for some fun?
+      </p>
+
+      <div class="buttons">
+        <a class="btn btn-pink" href="#fun">🚀 Enter Fun Zone</a>
+        <button class="btn" id="celebrate">🎊 CELEBRATE!</button>
+      </div>
+
+      <div id="counter">🏆 Champion energy: 100%</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-title">
+      <h2 class="neon-pink">💌 A MESSAGE FOR YOU</h2>
+      <p>A little thank-you from your swimming champion.</p>
+    </div>
+
+    <div class="message-card">
+      <div class="heart">❤️</div>
+      <p>Dear Praveen Uncle,</p>
+
+      <p>
+Thank you for sharing my happiness and distributing sweets to celebrate my two swimming medals!
+
+Your kind gesture made me feel very special. Thank you for your love and encouragement.
+
+With love,
+Sarthak” ❤️🏊‍♂️🥇🥉
+      </p>
+
+
+      <p>
+        I hope this little website makes you smile.
+        Thank you for being someone I wanted to share this
+        special moment with.
+      </p>
+
+      <h3>Made with love, just for you! 💖</h3>
+      <p>From your little champion 🏊</p>
+    </div>
+  </section>
+
+  <section class="achievement">
+    <div class="section-title">
+      <h2 class="neon-cyan">🏆 THE GOLDEN MOMENT</h2>
+      <p>Hard work. Practice. Determination. GOLD!</p>
+    </div>
+
+    <div class="achievement-card">
+      <div class="trophy">🥇</div>
+      <h3>NATIONAL SWIMMING CHAMPION</h3>
+      <p>
+        Every stroke brought me closer to my goal.
+        This gold medal is a memory I will always treasure!
+      </p>
+    </div>
+  </section>
+
+  <section class="fun-zone" id="fun">
+    <div class="section-title">
+      <h2 class="neon-pink">🎮 THE FUN ZONE</h2>
+      <p>Uncle, it's time to test your champion energy!</p>
+    </div>
+
+    <div class="fun-grid">
+      <div class="fun-card">
+        <div class="emoji">🎊</div>
+        <h3>Confetti Blast</h3>
+        <p>Make the whole screen celebrate my gold medal!</p>
+        <button class="btn btn-pink" id="confettiBtn">
+          BLAST OFF! 🎉
+        </button>
+      </div>
+
+      <div class="fun-card">
+        <div class="emoji">💌</div>
+        <h3>Secret Message</h3>
+        <p>There is a special surprise waiting just for you.</p>
+        <button class="btn" id="surpriseBtn">
+          UNLOCK MESSAGE 🔓
+        </button>
+      </div>
+
+      <div class="fun-card">
+        <div class="emoji">⚡</div>
+        <h3>Champion Energy</h3>
+        <p>Tap to charge up the champion power meter!</p>
+        <button class="btn" id="energyBtn">
+          CHARGE UP ⚡
+        </button>
+        <div id="energyValue" class="neon-cyan" style="margin-top:12px">
+          Energy: 0%
+        </div>
+      </div>
+
+      <div class="fun-card">
+        <div class="emoji">😎</div>
+        <h3>Compliment Machine</h3>
+        <p>Generate a little message for Praveen Uncle.</p>
+        <button class="btn btn-pink" id="complimentBtn">
+          MAKE ME SMILE ✨
+        </button>
+        <div id="reaction" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div id="surprise" aria-live="polite">
+      <div class="big">🥇🎉💖</div>
+      <h3>YOU'RE AN AWESOME UNCLE!</h3>
+      <p>
+        This gold medal is my achievement, but sharing my happiness
+        with special people makes it even better.
+      </p>
+      <p><strong>Thank you, Praveen Uncle! ❤️</strong></p>
+    </div>
+  </section>
+</main>
+
+
+  <section class="game-section" id="swim-game">
+    <div class="section-title">
+      <h2 class="neon-cyan">🏊 NEON SWIM CHALLENGE</h2>
+      <p>Swim, dodge obstacles, and collect gold medals!</p>
+    </div>
+    <div class="game-panel">
+      <div class="game-stats">
+        <span>🏅 Score: <b id="gameScore">0</b></span>
+        <span>❤️ Lives: <b id="gameLives">3</b></span>
+        <span>🏁 Distance: <b id="gameDistance">0</b>m</span>
+      </div>
+      <canvas id="swimCanvas" width="800" height="420"
+        aria-label="Swimming game. Use arrow keys or touch controls to swim and collect medals."></canvas>
+      <div id="gameMessage" aria-live="polite">READY, CHAMPION? 🥇</div>
+      <div class="game-buttons">
+        <button class="btn btn-pink" id="startSwim" type="button">▶ START GAME</button>
+        <button class="btn" id="pauseSwim" type="button">Ⅱ PAUSE</button>
+        <button class="btn" id="restartSwim" type="button">↻ RESTART</button>
+      </div>
+      <div class="game-controls">
+        <button class="btn" id="swimUp" type="button" aria-label="Swim up">▲</button>
+        <button class="btn" id="swimDown" type="button" aria-label="Swim down">▼</button>
+      </div>
+      <p class="game-help">Computer: use ↑ and ↓ arrow keys. Mobile: hold the arrow buttons. Collect 🥇 medals and avoid pink obstacles!</p>
+    </div>
+  </section>
+
+<footer>
+  <p>⚡ Built with 💖, neon lights and champion energy.</p>
+  <p>Made especially for Praveen Uncle.</p>
+  <p style="margin-top:12px">
+    <a href="https://in.linkedin.com/in/praveen-yedluri-46574935"
+       target="_blank" rel="noopener noreferrer">
+      Visit Praveen Uncle's LinkedIn ↗
+    </a>
+  </p>
+</footer>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>
